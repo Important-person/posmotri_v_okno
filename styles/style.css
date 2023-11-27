@@ -79,8 +79,8 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: inherit;
   font-weight: 400;
 }
 
@@ -105,14 +105,15 @@ ol {
 }
 
 .search-form__textfield {
-  color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  color: inherit;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: inherit;
   font-weight: 400;
+  cursor: pointer;
   background-color: transparent;
   border: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   width: 225px;
   appearance: none;
 }
@@ -158,12 +159,12 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 34px;
+  min-height: 34px;
   background-color: transparent;
-  border: 1px solid #FFF;
-  color: #FFF;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: inherit;
   font-weight: 700;
   cursor: pointer;
 }
@@ -197,11 +198,10 @@ ol {
   flex-direction: column;
   justify-content: flex-end;
   gap: 26px;
-  margin: -2px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: 'Oswald', Arial;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -237,7 +237,7 @@ ol {
 
 .content__card-link {
   text-decoration: none;
-  color: #FFF;
+  color: inherit;
   display: block;
   margin: 2px;
 }
@@ -263,21 +263,31 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  max-width: 200px;
+  font-family: 'Oswald', Arial;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  max-width: 200px;
+  font-family: 'Fira Sans Condensed' sans-serif;
+  font-size: inherit;
   font-weight: 400;
   line-height: 16.2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
   width: 194px;
   height: 103px;
 }
